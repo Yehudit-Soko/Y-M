@@ -1,0 +1,2 @@
+export const REDUCE_PRODUCT = "REDUCE_PRODUCT";
+export const FIND_PRODUCT = "FIND_PRODUCT";
