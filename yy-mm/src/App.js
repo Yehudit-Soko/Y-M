@@ -7,8 +7,8 @@ import React from 'react';
 import HomePage from './pages/HomePage';
 function App() {
   return (
-    <HomePage></HomePage>
-      // <Products></Products>
+    // <HomePage></HomePage>
+      <Products></Products>
 
   );
 };

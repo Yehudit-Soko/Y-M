@@ -1,5 +1,7 @@
 import Product from "../components/Product";
 import store from "../redux/store";
+import "../css/productsPage.css"
+
 function Products() {
     return (
         <div>

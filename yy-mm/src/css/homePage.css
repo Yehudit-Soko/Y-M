@@ -1,0 +1,38 @@
+nav {
+    background-color: #222;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 28px;
+    color: gold;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  li:hover {
+    color: gold;
+  }
+  
