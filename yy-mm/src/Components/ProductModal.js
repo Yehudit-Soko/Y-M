@@ -1,10 +1,12 @@
+// ProductModal
 import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png"
-import "../css/Product.css"
-import AddShoppingCart from "../functions/AddShoppingCart";
+import "../css/productModal.css"
+// import AddShoppingCart from "../functions/AddShoppingCart";
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import store from "../redux/store";
 import Product from "./Product";
+import CartButton from "./CartButton";
 
 
 function ProductModal(props) {
@@ -19,11 +21,7 @@ function ProductModal(props) {
                     <button onClick={props.onClose}>X</button>
                     <h1>{props.name}</h1>
                     <img src={props.src}></img>
-                    <button 
-                    // onClick={AddShoppingCart(props.name)}
-                    >
-                        <img src={shoppingCartIcon} alt="icon" style={{ width: '20px', height: '20px', marginRight: '8px' }} />
-                    </button>
+                    {/* <CartButton name={props.name}></CartButton> */}
                     <p>{props.price}ש"ח</p>
                     <p>{props.description}</p>
                 </div>

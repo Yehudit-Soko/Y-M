@@ -4,8 +4,10 @@ import "../css/productsPage.css"
 
 function Products() {
     return (
-        <div>
-            {store.getState().inventory.map(element => {
+        <div>{console.log(store.getState().inventory.inventory)}
+            {
+            
+            store.getState().inventory.inventory.map(element => {
                 return (
                     <Product name={element.name} src={element.src} price={element.price} description={element.description}></Product>
                 )

@@ -1,6 +1,15 @@
-import { createStore } from 'redux';
-import { inventoryReducer } from './reducers';
+import { createStore, combineReducers } from 'redux';
+import { inventoryReducer } from './inventoryReducers';
+import { cartReducer } from './cartReducer';
 
-export const store = createStore(inventoryReducer);
+
+
+const rootReducer = combineReducers({
+    cart: cartReducer,
+    inventory: inventoryReducer,
+
+});
+
+const store = createStore(rootReducer);
 
 export default store;

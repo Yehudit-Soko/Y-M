@@ -11,9 +11,12 @@
 //     // const dispatch = useDispatch();
 //     const {chosenProduct,setChosenProduct}=useState({});
 //     // store.getState().inventory.array.forEach(element => {
+//         console.log("hjgtf");
 //     store.getState().inventory.forEach(element => {
+//         console.log("hi!!");
 //         if (element.name === name) {
 //             chosenProduct = element;
+//             console.log("iffffffffffff");
 //         }
 //     });
 //     if (chosenProduct.amount === 0) {
