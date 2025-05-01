@@ -21,7 +21,9 @@ function ProductModal(props) {
                     <button onClick={props.onClose}>X</button>
                     <h1>{props.name}</h1>
                     <img src={props.src}></img>
-                    {/* <CartButton name={props.name}></CartButton> */}
+
+                    {/* <CartButton name={props.name}></CartButton> */}          
+
                     <p>{props.price}ש"ח</p>
                     <p>{props.description}</p>
                 </div>

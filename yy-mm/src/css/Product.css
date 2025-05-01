@@ -1,32 +1,34 @@
-/* עיצוב עבור רכיב המוצר */
+/* עיצוב רכיב המוצר */
 .product-container {
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px; /* רוחב רחב יותר */
+  height: 380px; /* גובה נמוך יותר */
+  padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 15px;
   text-align: center;
   cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* מסדר את התוכן באופן אנכי */
 }
 
-.product-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
+/* תמונה */
 .product-container img {
   width: 100%;
-  height: 180px;
+  height: 200px; /* גובה נמוך יותר לתמונה */
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
+  border: 2px solid #333; /* מסגרת לתמונה */
 }
 
-/* כותרת שם המוצר */
+/* שם המוצר */
 .product-container h1 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #333;
   font-weight: bold;
   margin-bottom: 10px;
@@ -34,9 +36,10 @@
 
 /* מחיר המוצר */
 .product-container .price {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #4CAF50;
   margin: 10px 0;
+  font-weight: bold;
 }
 
 /* תיאור המוצר */
@@ -49,46 +52,57 @@
   text-overflow: ellipsis;
 }
 
+/* הגדרת שורת כפתורים */
+.product-container .buttons-container {
+  display: flex;
+  justify-content: space-between; /* מסדר את הכפתורים בשורה */
+  gap: 10px; /* רווח בין הכפתורים */
+  width: 100%;
+}
+
 /* כפתור "פרטים נוספים" */
 .product-container .details-btn {
-  background-color: #ff9f00;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
   color: white;
   padding: 10px;
   font-size: 14px;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
-  width: 100%;
+  border-radius: 30px;
+  flex: 1; /* עושה את הכפתור צמוד לרוחב */
   cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .product-container .details-btn:hover {
-  background-color: #e68900;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
 }
 
-/* כפתור הוספה לעגלה */
-.product-container .cart-btn {
-  background-color: #4CAF50;
+/* כפתור "הוסף לעגלה" */
+.product-container .abc-btn {
+  background: linear-gradient(to right, #00b09b, #96c93d);
   color: white;
   padding: 10px;
   font-size: 14px;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
-  width: 100%;
+  border-radius: 30px;
+  flex: 1; /* עושה את הכפתור צמוד לרוחב */
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.product-container .cart-btn:hover {
-  background-color: #45a049;
+.product-container .abc-btn:hover {
+  background: linear-gradient(to right, #96c93d, #00b09b);
+  transform: scale(1.05);
 }
 
-/* אייקון עגלה בתוך הכפתור */
-.product-container .cart-btn img {
+/* אייקון בתוך כפתור הוספה לעגלה */
+.product-container .abc-btn img {
   margin-right: 8px;
 }
 
@@ -97,22 +111,20 @@
   .product-container {
       width: 100%;
       margin: 10px;
+      height: auto; /* נותן גובה אוטומטי במסכים קטנים */
   }
 
   .product-container img {
-      height: 150px;
+      height: 220px; /* גובה ממוצע שמתאים למובייל */
+  }
+
+  /* שינוי רוחב הכפתורים במובייל */
+  .product-container .buttons-container {
+      flex-direction: column; /* הכפתורים במובייל יהיו בעמודה */
+  }
+
+  .product-container .details-btn,
+  .product-container .abc-btn {
+      width: 100%; /* כל כפתור יתפוס את כל הרוחב במובייל */
   }
 }
-
-  
-
-
-
-
-
-
-
-
-
-
-  

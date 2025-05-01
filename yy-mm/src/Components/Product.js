@@ -28,6 +28,7 @@ function Product(props) {
                 <h1>{props.name}</h1>
                 <img src={props.src} alt={props.name}></img>
                 <button className="details-btn" onClick={getDetails}>פרטים נוספים</button>
+                <button className="abc-btn">הוסף לעגלה</button>
                 {/* <CartButton name={props.name}></CartButton> */}
                 <p className="price">{props.price} ש"ח</p>
                 <p className="description">{props.description}</p>
