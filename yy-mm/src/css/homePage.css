@@ -1,9 +1,22 @@
 nav {
-    background-color: #222;
-    padding: 20px 40px;
-    font-family: Arial, sans-serif;
-    direction: rtl;
-  }
+  background-color: #222;
+  padding: 20px 40px;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  position: fixed; /* חדש */
+  top: 0;          /* חדש */
+  width: 100%;     /* חדש */
+  z-index: 1000;   /* חדש, מבטיח שישאר מעל כל תוכן */
+}
+body {
+    padding-top: 100px; /* כדי לפנות מקום לניווט */
+    margin: 0;
+}
+body {
+  padding-top: 100px; /* כדי לפנות מקום לניווט */
+  margin: 0;
+}
+
   
   .nav-container {
     display: flex;

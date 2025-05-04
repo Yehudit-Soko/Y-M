@@ -1,38 +1,99 @@
 nav {
-    background-color: #222;
-    padding: 20px 40px;
-    font-family: Arial, sans-serif;
-    direction: rtl;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 28px;
-    color: gold;
-    font-weight: bold;
-  }
-  
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  li:hover {
-    color: gold;
-  }
-  
+  background-color: rgb(255, 255, 255);
+  /* רקע לבן */
+  padding: 20px 40px;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+nav.scrolled {
+  background-color: black;
+  padding: 10px 40px;
+}
+
+
+
+
+nav.scrolled ul li a {
+  color: white;
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  color: gold;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  position: relative; /* חדש */
+  overflow: hidden;   /* להבטיח שהקו לא יגלוש */
+}
+
+
+
+
+nav ul li a:hover {
+  color: gold;
+  /* כשהעכבר עובר — זהב */
+}
+
+
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0; /* בהתחלה אין קו */
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  background-color: gold;
+  transition: width 0.3s ease;
+}
+
+
+nav ul li a:hover::after {
+  width: 100%; /* בריחוף הקו מתרחב */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
