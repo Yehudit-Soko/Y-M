@@ -9,6 +9,7 @@ import CheckOut from './pages/Checkout';
 // import HomePage from './pages/HomePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import ShoppingCart from './pages/ShoppingCart';
 
 function App() {
   return (
@@ -16,8 +17,12 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<HomePage />}></Route>
-      <Route path='/products' element={<Products />}></Route>
-      {/* <Route path='/' element={< />}></Route> */}
+      <Route path='/products' element={<Products type="default"/>}></Route>
+      <Route path='/piano' element={<Products type="piano"/>}></Route>
+      <Route path='/violin' element={<Products type="violin"/>}></Route>
+      <Route path='/special' element={<Products type="harp"/>}></Route>
+      <Route path='/guitar' element={<Products type="guitar"/>}></Route>
+      <Route path='/shoppingCart' element={< ShoppingCart/>}></Route>
       <Route path='/checkOut' element={<CheckOut />}></Route>
     </Routes>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/checkout.css";
+import Nav from "../Components/Nav";
 
 
 
@@ -8,7 +9,9 @@ function CheckOut() {
     alert("ההזמנה בוצעה בהצלחה!!")
   }
   return (
-<form className="checkout-form" onSubmit={finishOrder}>
+  <>
+  <Nav></Nav>
+  <form className="checkout-form" onSubmit={finishOrder}>
   <h2>טופס תשלום</h2>
   
   <div className="form-columns">
@@ -75,6 +78,8 @@ function CheckOut() {
 
   <button type="submit" className="checkout-button">בצע תשלום</button>
 </form>
+
+  </>
 
   );
 }
