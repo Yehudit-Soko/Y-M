@@ -10,8 +10,9 @@ import CheckOut from './pages/Checkout';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ShoppingCart from './pages/ShoppingCart';
+import AddToCart from './pages/AddToCart';
 
-function App() {
+function App(props) {
   return (
 
     <BrowserRouter>
@@ -24,6 +25,8 @@ function App() {
       <Route path='/guitar' element={<Products type="guitar"/>}></Route>
       <Route path='/shoppingCart' element={< ShoppingCart/>}></Route>
       <Route path='/checkOut' element={<CheckOut />}></Route>
+      <Route path='/AddToCart' element={<AddToCart />}></Route>
+      
     </Routes>
 
     </BrowserRouter>

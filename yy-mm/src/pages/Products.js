@@ -1,6 +1,6 @@
 import Product from "../Components/Product";
 import store from "../redux/store";
-import "../css/productsPage.css";
+import "../Css/productsPage.css";
 import Nav from "../Components/Nav";
 
 function Products(props) {

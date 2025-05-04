@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/checkout.css";
+import "../Css/checkout.css";
 import Nav from "../Components/Nav";
 
 
