@@ -1,6 +1,8 @@
 import React from "react";
 import "../Css/checkout.css";
 import Nav from "../Components/Nav";
+import Footer from "../Components/Footer";
+
 
 
 
@@ -78,6 +80,7 @@ function CheckOut() {
 
   <button type="submit" className="checkout-button">בצע תשלום</button>
 </form>
+
 
   </>
 

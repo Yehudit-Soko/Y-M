@@ -16,6 +16,7 @@ import e from "../pictures/silderB/e.png"
 import f from "../pictures/silderB/f.png"
 import g from "../pictures/silderB/g.png"
 import h from "../pictures/silderB/h.png"
+import Footer from "../Components/Footer";
 
 function HomePage() {
     const brands1 = [
@@ -101,6 +102,7 @@ function HomePage() {
                     <ImgComponent key={index} path={b.image} className="slider-item-wrapper-brand" />
                 ))}
             </Slider>
+            <Footer></Footer>
         </>
     );
 }

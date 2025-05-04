@@ -4,6 +4,7 @@ import store from "../redux/store";
 import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png";
 import BigProduct from "../Components/BigProduct";
 import ReduceCart from "../Components/ReduceCart";
+import Footer from "../Components/Footer";
 
 function ShoppingCart() {
   {
