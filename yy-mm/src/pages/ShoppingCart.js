@@ -18,7 +18,7 @@ function ShoppingCart() {
           <Nav></Nav> <img
             src={shoppingCartIcon}
             alt="icon"
-            style={{ width: "30vw", height: "30vw", marginRight: "8px" }}
+            style={{ width: "50vw", height: "40vw", marginRight: "8px",  }}
           />
         </>
 

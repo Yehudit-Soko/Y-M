@@ -1,7 +1,7 @@
 /* עיצוב רכיב המוצר */
 .product-container {
-  background-color: rgb(231, 218, 204);
-  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 300px; /* רוחב רחב יותר */
   height: 380px; /* גובה נמוך יותר */
@@ -18,12 +18,12 @@
 
 /* תמונה */
 .product-container img {
-  width: 100%;
-  height: 200px; /* גובה נמוך יותר לתמונה */
-  object-fit: cover;
+  width: 200px;
+  height: 100px;
+  /* object-fit: cover;  התמונה לא תתאים את עצמה לגודל */
   border-radius: 8px;
-  margin-bottom: 15px;
-  border: 2px solid #333; /* מסגרת לתמונה */
+  /* margin-bottom: 15px; */
+  /* border: 2px solid #333; מסגרת לתמונה */
 }
 
 /* שם המוצר */
@@ -56,26 +56,26 @@
 .product-container .buttons-container {
   display: flex;
   justify-content: space-between; /* מסדר את הכפתורים בשורה */
-  gap: 10px; /* רווח בין הכפתורים */
+  gap: 10px;
   width: 100%;
 }
 
 /* כפתור "פרטים נוספים" */
 .product-container .details-btn {
-  background: linear-gradient(45deg, #ffd341, #d18616);
+  background: linear-gradient(45deg, #20201f, #4a4947);
   color: white;
   padding: 10px;
   font-size: 14px;
   font-weight: bold;
   border: none;
-  border-radius: 30px;
+  border-radius: 0px;
   flex: 1; /* עושה את הכפתור צמוד לרוחב */
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
 
 .product-container .details-btn:hover {
-  background: linear-gradient(45deg,  #d18616,#ffd341);
+  background: linear-gradient(45deg,  #1911ef,#3c416d);
   transform: scale(1.05);
 }
 

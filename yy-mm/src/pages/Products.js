@@ -9,7 +9,7 @@ function Products(props) {
   return (
     <>
       <Nav></Nav>
-      <div>
+      <div className="products">
         {console.log(store.getState().inventory.inventory)}
         {store.getState().inventory.inventory.map((element) => {
             if(props.type==element.type||props.type=="default")
