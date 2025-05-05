@@ -5,8 +5,12 @@ import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png";
 import BigProduct from "../Components/BigProduct";
 import ReduceCart from "../Components/ReduceCart";
 import Footer from "../Components/Footer";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 function ShoppingCart() {
+  const cart = useSelector(state => state.cart.cart); // גישה למלאי
+
   {
     if (store.getState().cart.cart.length == 0) {
       return (
@@ -26,7 +30,7 @@ function ShoppingCart() {
       <Nav></Nav>
 
       <div>
-        {store.getState().cart.cart.map((element) => {
+        {cart.map((element) => {
           return (
             <div>
               <BigProduct
@@ -36,7 +40,12 @@ function ShoppingCart() {
                 description=""
               ></BigProduct>
               <ReduceCart></ReduceCart>
+              <button>+</button>
+                <p>{element.amount}</p>
+                <button>-</button>
+                <button>עדכן כמות</button>
             </div>
+
           );
         })}
       </div>

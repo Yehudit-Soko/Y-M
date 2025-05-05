@@ -14,7 +14,7 @@ import AddToCart from './pages/AddToCart';
 
 function App(props) {
   return (
-
+<Provider store={store}>
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<HomePage />}></Route>
@@ -30,7 +30,7 @@ function App(props) {
     </Routes>
 
     </BrowserRouter>
-
+</Provider>
     // <CheckOut></CheckOut>
 
 

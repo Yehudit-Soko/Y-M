@@ -19,6 +19,7 @@ function Products(props) {
               src={element.src}
               price={element.price}
               description={element.description}
+              amount = {element.amount}
             ></Product>
           );
         })}

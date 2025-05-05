@@ -1,45 +1,44 @@
-// CartButton
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import store from "../redux/store";
 import { add_cart } from "../redux/actions";
-import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png"
-
+import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png";
 
 function CartButton(props) {
-        const dispatch = useDispatch();
-        const [chosenProduct, setChosenProduct]  = useState({});
+    const dispatch = useDispatch();
+    const inventory = useSelector(state => state.inventory.inventory); // גישה למלאי
+    const [chosenProduct, setChosenProduct] = useState({});
+
     function AddShoppingCart() {
-       
+        const product = inventory.find(element => element.name === props.name);
 
-        console.log("hjgtf");
-        store.getState().inventory.forEach(element => {
-            console.log("hi!!");
-            if (element.name === props.name) {
-                setChosenProduct(element);
-                console.log("iffffffffffff");
-            }
-        });
+        if (!product) {
+            alert("המוצר לא נמצא במלאי");
+            return;
+        }
 
-        const product = store.getState().inventory.find(element => element.name === props.name);
+        setChosenProduct(product); // עדכון המוצר שנבחר
 
-        if (chosenProduct.amount === 0) {
+        if (product.amount === 0) {
             alert("המוצר אזל מהמלאי");
-
-        }
-        else {
-            dispatch(add_cart(chosenProduct));
-            console.log("hi");
-            alert("המוצר נוסף בהצלחה")
+            return;
         }
 
+        if (product.amount < props.counter) {
+            alert(`המוצר מוגבל ל-${product.amount} יחידות`);
+            return;
+        }
+        product.amount=props.counter;
+
+        dispatch(add_cart(product));
+        alert("המוצר נוסף בהצלחה");
     }
-    return (<button className="cart-btn" onClick={AddShoppingCart}>
-        <img src={shoppingCartIcon} alt="icon" style={{ width: '20px', height: '20px', marginRight: '8px' }} />
-        הוסף לעגלה
-    </button>);
 
+    return (
+        <button className="cart-btn" onClick={AddShoppingCart}>
+            <img src={shoppingCartIcon} alt="icon" style={{ width: '20px', height: '20px', marginRight: '8px' }} />
+            הוסף לעגלה
+        </button>
+    );
+}
 
-
-
-} export default CartButton;
+export default CartButton;

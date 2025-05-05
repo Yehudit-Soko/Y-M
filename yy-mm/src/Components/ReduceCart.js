@@ -1,7 +1,11 @@
 function ReduceCart () {
+    function reduce () {
+        
+    }
+
 
     return(
-        <button>הסר מההעגלה החמודה</button>
+        <button onClick={reduce()}>הסר מההעגלה החמודה</button>
     )
 
 }export default ReduceCart;

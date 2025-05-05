@@ -32,17 +32,20 @@ const inventoryInitialState = {
 };
 
 
-
 export const inventoryReducer = (state = inventoryInitialState, action) => {
     switch (action.type) {
-        // case FIND_PRODUCT:
-        //     return state;
         case REDUCE_PRODUCT:
-            return state;
+            return {
+                ...state,
+                inventory: state.inventory.map(item => {
+                    if (item.name === action.payload.name) {
+                        return { ...item, amount: item.amount > 0 ? item.amount - 1 : 0 }; // מפחית את כמות המוצר, לא פחות מ-0
+                    }
+                    return item;
+                })
+            };
 
         default:
             return state;
-    }
-
-}
+}}
 

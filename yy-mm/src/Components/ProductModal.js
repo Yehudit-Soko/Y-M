@@ -30,7 +30,8 @@ function ProductModal(props) {
                             name: props.name,
                             src: props.src,
                             price: props.price,
-                            description: props.description
+                            description: props.description,
+                            amount: props.amount
                         }
                     })}>
                     
