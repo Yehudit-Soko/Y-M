@@ -15,18 +15,18 @@ import electricViolin from "../pictures/violins/electricViolin.png"
 
 
 const inventoryInitialState = {
-    inventory: [{ name: "גיטרה קלאסית", price: 430, src: classGuitar, description: "לחיעבכי", amount: 5 ,type:"guitar"},
-    { name: "גיטרה חשמלית", price: 5430, src: electricGuitar, description: "לחיעבכי", amount: 0 ,type:"guitar"},
-    { name: "גיטרה אקוסטית", price: 1785, src: acousticGuitar, description: "לחיעבכי", amount: 5 ,type:"guitar"},
-    { name: "פסנתר כנף", price: 32900, src: grandPiano, description: "לחיעבכי", amount: 5 ,type:"piano"},
-    { name: "פסנתר קיר", price: 21900, src: wallPiano, description: "לחיעבכי", amount: 5 ,type:"piano"},
-    { name: "פסנתר חשמלי", price: 4500, src: electricPiano, description: "לחיעבכי", amount: 5 ,type:"piano"},
-    { name: "כינור אלקטרוני", price: 8390, src: electricViolin, description: "לחיעבכי", amount: 5 ,type:"violin"},
-    { name: "כינור ברוק", price: 2199, src: brukViolin, description: "לחיעבכי", amount: 5 ,type:"violin"},
-    { name: "כינור קלאסי", price: 569, src: classicViolin, description: "לחיעבכי", amount: 5 ,type:"violin"},
-    { name: "נבל חשמלי", price: 12000, src: electricHarp, description: "לחיעבכי", amount: 5 ,type:"harp"},
-    { name: "נבל מיני", price: 690, src: miniHarp, description: "לחיעבכי", amount: 5 ,type:"harp"},
-    { name: "נבל קלאסי", price: 999, src: classHarp, description: "לחיעבכי", amount: 5 ,type:"harp"}
+    inventory: [{ name: "גיטרה קלאסית", price: "430", src: classGuitar, description: "לחיעבכי", amount: 5 ,type:"guitar"},
+    { name: "גיטרה חשמלית", price: "5430", src: electricGuitar, description: "לחיעבכי", amount: 0 ,type:"guitar"},
+    { name: "גיטרה אקוסטית", price: "1785", src: acousticGuitar, description: "לחיעבכי", amount: 5 ,type:"guitar"},
+    { name: "פסנתר כנף", price: "32900", src: grandPiano, description: "לחיעבכי", amount: 5 ,type:"piano"},
+    { name: "פסנתר קיר", price: "21900", src: wallPiano, description: "לחיעבכי", amount: 5 ,type:"piano"},
+    { name: "פסנתר חשמלי", price: "4500", src: electricPiano, description: "לחיעבכי", amount: 5 ,type:"piano"},
+    { name: "כינור אלקטרוני", price: "8390", src: electricViolin, description: "לחיעבכי", amount: 5 ,type:"violin"},
+    { name: "כינור ברוק", price: "2199", src: brukViolin, description: "לחיעבכי", amount: 5 ,type:"violin"},
+    { name: "כינור קלאסי", price: "569", src: classicViolin, description: "לחיעבכי", amount: 5 ,type:"violin"},
+    { name: "נבל חשמלי", price: "12000", src: electricHarp, description: "לחיעבכי", amount: 5 ,type:"harp"},
+    { name: "נבל מיני", price: "690", src: miniHarp, description: "לחיעבכי", amount: 5 ,type:"harp"},
+    { name: "נבל קלאסי", price: "999", src: classHarp, description: "לחיעבכי", amount: 5 ,type:"harp"}
     ],
 
 };

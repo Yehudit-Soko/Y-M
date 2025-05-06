@@ -1,18 +1,15 @@
+import "../Css/bigProduct.css";
 
 function BigProduct(props) {
-    return (
+  return (
+    <div className="big-product-container">
+      <h1>{props.name}</h1>
+      <img src={props.src} alt={props.name} />
+      <p className="price">{props.price} ש"ח</p>
+      <p>{props.description}</p>
+      
+    </div>
+  );
+}
 
-    
-            <div >
-                <h1>{props.name}</h1>
-                <img src={props.src}></img>
-
-
-                <p>{props.price}ש"ח</p>
-                <p>{props.description}</p>
-            </div>
-    
-
-    )
-
-} export default BigProduct;
+export default BigProduct;

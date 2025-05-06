@@ -3,14 +3,22 @@ import store from "../redux/store";
 import "../Css/productsPage.css";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
-
+import { Link } from "react-router-dom";
 
 function Products(props) {
   return (
     <>
       <Nav></Nav>
+        <nav style={{top :"100",position: "inherit" }}>
+          <li><Link to="/piano">פסנתרים</Link></li>
+          <li><Link to="/violin">כינורות</Link></li>
+          <li><Link to="/guitar">גיטרות</Link></li>
+          <li><Link to="/special">המיוחדים שלנו</Link></li>
+        </nav>
+    
       <div className="products">
-        {console.log(store.getState().inventory.inventory)}
+     
+        {console.log(store.getState().inventory.inventory)        }
         {store.getState().inventory.inventory.map((element) => {
             if(props.type==element.type||props.type=="default")
           return (
