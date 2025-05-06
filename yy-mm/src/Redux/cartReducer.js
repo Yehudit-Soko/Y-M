@@ -12,16 +12,29 @@ export const cartReducer = (state = cartInitialState, action) => {
                 ...state,
                 cart: [...state.cart, action.payload]
             };
-        case REDUCE_PRODUCT:
-            return {
-                ...state,
-                cart: state.cart.filter(item => item.name !== action.payload.name)
-            };
-        case CHANGE_PRODUCT:
-            return{
-                ...state,
-                cart: state.cart.map((item)=>{if(action.payload.name==item.name){item.amount+=action.payload.amount}})
-            }
+            case REDUCE_PRODUCT:
+                if (!action.payload ) {
+                    return state; // או טיפול בשגיאה אחרת
+                }
+                return {
+                    ...state,
+                    cart: state.cart.filter(item => item.name !== action.payload.name)
+                };
+            
+            case CHANGE_PRODUCT:
+                return {
+                    ...state,
+                    cart: state.cart.map(item => {
+                        if (action.payload.product.name === item.name) {
+                            return {
+                                ...item,
+                                amount:action.payload.amount // החזרת אובייקט חדש עם amount מעודכן
+                            };
+                        }
+                        return item; // החזרת האובייקט המקורי אם אינו תואם
+                    })
+                };
+            
         default:
             return state;
     }

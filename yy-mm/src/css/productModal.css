@@ -1,22 +1,22 @@
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 500px;
-    width: 100%;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
 
 
 /* Overlay של המודל */
@@ -26,11 +26,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* רקע כהה לשטח שמסביב */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* רקע כהה לשטח שמסביב */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* מוודא שהמודל יהיה מעל כל תוכן אחר */
+  z-index: 1000;
+  /* מוודא שהמודל יהיה מעל כל תוכן אחר */
 }
 
 /* תוכן המודל */
@@ -55,16 +57,20 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  padding: 5px 10px; /* הפחתת הריפוד כדי שהכפתור יהיה קטן יותר */
+  padding: 5px 10px;
+  /* הפחתת הריפוד כדי שהכפתור יהיה קטן יותר */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 /* מעבר עם העכבר על כפתור ה-X */
 .modal-content button:hover {
-  background-color: #333; /* צבע רקע שחור */
-  color: #fff; /* צבע טקסט לבן */
-  border: 2px solid #333; /* מסגרת שחורה */
+  background-color: #333;
+  /* צבע רקע שחור */
+  color: #fff;
+  /* צבע טקסט לבן */
+  border: 2px solid #333;
+  /* מסגרת שחורה */
 }
 
 
@@ -105,16 +111,6 @@
 
 /* מעבר עם העכבר על המודל */
 .modal-content:hover {
-  transform: scale(1.05); /* אפקט זום קל בעת מעבר עם העכבר */
+  transform: scale(1.05);
+  /* אפקט זום קל בעת מעבר עם העכבר */
 }
-
-
-
-
-
-
-
-
-
-
-

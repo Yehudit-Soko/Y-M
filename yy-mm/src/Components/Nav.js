@@ -28,7 +28,7 @@ function Nav() {
           <li><Link to="/">צור קשר</Link></li>
           <li><Link to="/CheckOut">תשלום</Link></li>
         </ul>
-        <div className="logo">🎵 מיתרים</div>
+       
       </div>
     </nav>
   );

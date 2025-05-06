@@ -1,51 +1,65 @@
+.header {
+  position: sticky;
+  height: 2px;
+}
+
 nav {
+
+  margin-top: 0;
+  /* אין רווח בין ההדר ל-NAV */
   background-color: #ffffff;
-  padding: 20px 40px;
   font-family: Arial, sans-serif;
   direction: rtl;
-  position: fixed; /* חדש */
-  top: 0;          /* חדש */
-  width: 100%;     /* חדש */
-  z-index: 1000;   /* חדש, מבטיח שישאר מעל כל תוכן */
+  /* position: fixed; */
+  /* חדש */
+  top: 0;
+  /* חדש */
+  width: 100%;
+  /* חדש */
+  z-index: 1000;
+  /* חדש, מבטיח שישאר מעל כל תוכן */
 }
+
 body {
-    padding-top: 100px; /* כדי לפנות מקום לניווט */
-    margin: 0;
-}
-body {
-  padding-top: 100px; /* כדי לפנות מקום לניווט */
+  padding-top: 100px;
+  /* כדי לפנות מקום לניווט */
   margin: 0;
 }
 
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 28px;
-    color: gold;
-    font-weight: bold;
-  }
-  
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  li:hover {
-    color: gold;
-  }
-  
+body {
+  padding-top: 100px;
+  /* כדי לפנות מקום לניווט */
+  margin: 0;
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  color: gold;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+li:hover {
+  color: gold;
+}

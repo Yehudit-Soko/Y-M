@@ -3,8 +3,10 @@
   background-color: rgb(255, 255, 255);
   border-radius: 0px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 300px; /* רוחב רחב יותר */
-  height: 380px; /* גובה נמוך יותר */
+  width: 300px;
+  /* רוחב רחב יותר */
+  height: 380px;
+  /* גובה נמוך יותר */
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 15px;
@@ -13,7 +15,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* מסדר את התוכן באופן אנכי */
+  justify-content: space-between;
+  /* מסדר את התוכן באופן אנכי */
 }
 
 /* תמונה */
@@ -21,10 +24,18 @@
   width: 200px;
   height: 100px;
   /* object-fit: cover;  התמונה לא תתאים את עצמה לגודל */
-  border-radius: 8px;
+  border-radius: 0px;
   /* margin-bottom: 15px; */
-  /* border: 2px solid #333; מסגרת לתמונה */
-}
+  border: 0.5px solid #333;  /*מסגרת לתמונה */
+  display: inline-block;
+  position: relative;
+ }
+
+ .img-icon{
+  border: none;  /*ללא מסגרת לתמונה */
+
+ }
+
 
 /* שם המוצר */
 .product-container h1 {
@@ -55,7 +66,8 @@
 /* הגדרת שורת כפתורים */
 .product-container .buttons-container {
   display: flex;
-  justify-content: space-between; /* מסדר את הכפתורים בשורה */
+  justify-content: space-between;
+  /* מסדר את הכפתורים בשורה */
   gap: 10px;
   width: 100%;
 }
@@ -69,13 +81,14 @@
   font-weight: bold;
   border: none;
   border-radius: 0px;
-  flex: 1; /* עושה את הכפתור צמוד לרוחב */
+  flex: 1;
+  /* עושה את הכפתור צמוד לרוחב */
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
 
 .product-container .details-btn:hover {
-  background: linear-gradient(45deg,  #1911ef,#3c416d);
+  background: linear-gradient(45deg, #1911ef, #3c416d);
   transform: scale(1.05);
 }
 
@@ -88,7 +101,8 @@
   font-weight: bold;
   border: none;
   border-radius: 30px;
-  flex: 1; /* עושה את הכפתור צמוד לרוחב */
+  flex: 1;
+  /* עושה את הכפתור צמוד לרוחב */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -109,22 +123,26 @@
 /* מותאם למובייל */
 @media (max-width: 768px) {
   .product-container {
-      width: 100%;
-      margin: 10px;
-      height: auto; /* נותן גובה אוטומטי במסכים קטנים */
+    width: 100%;
+    margin: 10px;
+    height: auto;
+    /* נותן גובה אוטומטי במסכים קטנים */
   }
 
   .product-container img {
-      height: 220px; /* גובה ממוצע שמתאים למובייל */
+    height: 220px;
+    /* גובה ממוצע שמתאים למובייל */
   }
 
   /* שינוי רוחב הכפתורים במובייל */
   .product-container .buttons-container {
-      flex-direction: column; /* הכפתורים במובייל יהיו בעמודה */
+    flex-direction: column;
+    /* הכפתורים במובייל יהיו בעמודה */
   }
 
   .product-container .details-btn,
   .product-container .abc-btn {
-      width: 100%; /* כל כפתור יתפוס את כל הרוחב במובייל */
+    width: 100%;
+    /* כל כפתור יתפוס את כל הרוחב במובייל */
   }
 }

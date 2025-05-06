@@ -7,8 +7,24 @@ body {
 
 /* הגדרת התפריט הראשי */
 nav {
-    background-color: #333;
-    padding: 10px 20px;
+    /* background-color: #333;
+     padding: 10px 20px; */
+    /* background-color: #341717; */
+    /* צבע רקע */
+    padding: 5px;
+    /* רווח פנימי קטן יותר */
+    display: flex;
+    /* שימוש ב-flexbox */
+    justify-content: space-around;
+    /* מרווח שווה בין הפריטים */
+    height: 40px;
+    /* גובה קבוע לניווט */
+    position: sticky;
+    /* הופך את הניווט לדבק */
+    top: 50px;
+    /* מיקום תחת הניווט הקודם */
+    z-index: 1000;
+    /* מבטיח שהניווט יופיע מעל אלמנטים אחרים */
 }
 
 nav ul {
@@ -20,7 +36,9 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-right: 50px;
+
+
 }
 
 nav ul li a {
@@ -116,14 +134,49 @@ nav ul li a {
     }
 }
 
-.products{
+.products {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+.nav_small {
+    background-color: #333;
+    /* צבע רקע */
+    padding: 5px;
+    /* רווח פנימי קטן יותר */
+    display: flex;
+    /* שימוש ב-flexbox */
+    justify-content: space-around;
+    /* מרווח שווה בין הפריטים */
+    height: 40px;
+    /* גובה קבוע לניווט */
+    position: sticky;
+    /* הופך את הניווט לדבק */
+    top: 50px;
+    /* מיקום תחת הניווט הקודם */
+    z-index: 1000;
+    /* מבטיח שהניווט יופיע מעל אלמנטים אחרים */
+}
 
+.nav_small li {
+    list-style-type: none;
+    /* הסרת תבלינים */
+}
 
+.nav_small a {
+    color: white;
+    /* צבע טקסט */
+    text-decoration: none;
+    /* הסרת קו תחתון */
+    padding: 5px 10px;
+    /* רווח פנימי קטן יותר סביב הקישורים */
+    transition: background-color 0.3s;
+    /* אפקט מעבר */
+}
 
-
+.nav_small a:hover {
+    background-color: #555;
+    /* צבע רקע כשמעבירים מעל */
+}

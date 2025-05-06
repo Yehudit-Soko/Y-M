@@ -33,17 +33,17 @@ function HomePage() {
         { image: g },
         { image: h },
 
-    
+
     ];
 
     const settings1 = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2500,
         rtl: true,
         responsive: [
             {
@@ -62,7 +62,7 @@ function HomePage() {
     }
 
     const settings2 = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 5,
@@ -90,14 +90,20 @@ function HomePage() {
 
     return (
         <>
+            <div class="header">
+                <p className="A">
+                    מיתרים
+                </p>
+            {/* <div className="logo">🎵 מיתרים</div> */}
+            </div>
             <Nav />
-            <Slider {...settings1} className="custom-slider-brand">
+            <Slider {...settings1} className="custom-slider-brand1">
                 {brands1.map((b, index) => (
                     <ImgComponent key={index} path={b.image} className="slider-item-wrapper-brand" />
                 ))}
             </Slider>
 
-            <Slider {...settings2} className="custom-slider-brand">
+            <Slider {...settings2} className="custom-slider-brand2">
                 {brands2.map((b, index) => (
                     <ImgComponent key={index} path={b.image} className="slider-item-wrapper-brand" />
                 ))}

@@ -7,7 +7,7 @@ import Footer from "../Components/Footer";
 
 function AddToCart(props) {
     const location = useLocation();
-    const { name, src, price, description ,amount} = location.state;
+    const { name, src, price, description, amount } = location.state;
 
     const [counter, setCounter] = useState(1);
 
@@ -27,7 +27,7 @@ function AddToCart(props) {
                 }}>-</button>
                 <CartButton name={name} counter={counter} /> {/* הפעלת כפתור הוספת המוצר לעגלה */}
             </div>
-            
+
             <Footer />
         </>
     );

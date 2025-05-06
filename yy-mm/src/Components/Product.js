@@ -29,8 +29,10 @@ const navigate = useNavigate();
     return (
         <>
             <div className="product-container">
+               
+                <img  src={props.src} alt={props.name}></img>
+                
                 <h1>{props.name}</h1>
-                <img src={props.src} alt={props.name}></img>
                 <button className="details-btn" onClick={getDetails}>פרטים נוספים</button>
                 <button onClick={() => navigate('/AddToCart', {
                         state: {
@@ -41,8 +43,9 @@ const navigate = useNavigate();
                             amount: props.amount
                         }
                     })}>
-                    
+                     <div className="img-icon">
                         <img src={Icon} style={{ width: "50px", height: "50px" }} />
+                        </div>
                     </button>     
                 <p className="price">{props.price} ש"ח</p>
                 <p className="description">{props.description}</p>

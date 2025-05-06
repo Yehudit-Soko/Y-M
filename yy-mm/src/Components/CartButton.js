@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { add_cart } from "../redux/actions";
+import { add_cart, change_product } from "../redux/actions";
 import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png";
 
 function CartButton(props) {
@@ -27,9 +27,10 @@ function CartButton(props) {
             alert(`המוצר מוגבל ל-${product.amount} יחידות`);
             return;
         }
-        product.amount=props.counter;
+       
 
         dispatch(add_cart(product));
+        dispatch(change_product(product,props.counter));
         alert("המוצר נוסף בהצלחה");
     }
 

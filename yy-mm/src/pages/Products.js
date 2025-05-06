@@ -9,7 +9,7 @@ function Products(props) {
   return (
     <>
       <Nav></Nav>
-        <nav style={{top :"100",position: "inherit" }}>
+        <nav className="nav_small">
           <li><Link to="/piano">פסנתרים</Link></li>
           <li><Link to="/violin">כינורות</Link></li>
           <li><Link to="/guitar">גיטרות</Link></li>

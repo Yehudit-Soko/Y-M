@@ -10,7 +10,7 @@ export  const add_cart = (product) => ({
 });
 export const change_product=(product,amount)=>({
     type: CHANGE_PRODUCT,
-    payload: product,amount,
+    payload: {product,amount},
 });
 // export const find_product = (name) => ({
 //     type: FIND_PRODUCT,

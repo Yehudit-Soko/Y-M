@@ -1,62 +1,69 @@
+.checkout-form {
+  max-width: 450px;
+  /* לא רחב מדי כדי שיראה עומד */
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  border-radius: 0px;
+  /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); */
+  direction: rtl;
+  font-family: 'Arial', sans-serif;
 
-   .checkout-form {
-    max-width: 450px; /* לא רחב מדי כדי שיראה עומד */
-    margin: 40px auto;
-    padding: 25px;
-    background-color: #ffffff;
-    border: 2px solid #000;
-    border-radius: 0px;
-    /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); */
-    direction: rtl;
-    font-family: 'Arial', sans-serif;
-    
-  }
-  .checkout-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* מרכז את כל מה שבתוך הטופס */
-  }
+}
 
-  
-  
-  
-  .checkout-form h2, .checkout-form h3 { 
-     text-align: center; 
-     color: #bfa036; 
-     margin-bottom: 1px; 
-   } 
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* מרכז את כל מה שבתוך הטופס */
+}
 
-  .form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px; /* היה לך 20px - הקטנתי */
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #000;
-  } 
-  
-   .form-group input {
-    padding: 10px;
-    border: 1px solid #bfa036;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-    font-size: 16px;
-    max-width: 250px; /* אפשר גם 200px אם אתה רוצה ממש צר */
 
-  } 
-  
+
+
+.checkout-form h2,
+.checkout-form h3 {
+  text-align: center;
+  color: #bfa036;
+  margin-bottom: 1px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  /* היה לך 20px - הקטנתי */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #bfa036;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  max-width: 250px;
+  /* אפשר גם 200px אם אתה רוצה ממש צר */
+
+}
+
 .checkout-button {
   margin-top: 20px;
-  width: 100%; /* תמיד ייקח את כל הרוחב של הטופס */
-  max-width: 400px; /* אפשר לשים מקסימום שיהיה יפה */
+  width: 100%;
+  /* תמיד ייקח את כל הרוחב של הטופס */
+  max-width: 400px;
+  /* אפשר לשים מקסימום שיהיה יפה */
   padding: 12px;
   background-color: #000;
   color: #bfa036;
@@ -66,54 +73,60 @@
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
-  align-self: center; /* מרכז את הכפתור */
+  align-self: center;
+  /* מרכז את הכפתור */
 }
 
-  
-   .checkout-button:hover {
-    background-color: #bfa036;
-    color: #fff;
-  }
 
-  .expiry-fields {
-    display: flex;
-    gap: 10px; /* רווח קטן בין חודש לשנה */
-  }
-  
-  .expiry-fields input {
-    flex: 1;
-    min-width: 60px;
-    max-width: 80px;
-  }
+.checkout-button:hover {
+  background-color: #bfa036;
+  color: #fff;
+}
 
-  .form-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px; /* רווח בין שתי העמודות */
-  }
-  
-  .personal-details, .credit-card-details {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  /* כבר יש לך עיצוב כללי ל-input */
-  .form-group input {
-    padding: 8px;
-    font-size: 14px;
-    /* max-width: 100%; */
-    max-width: 220px; /* הגבלת רוחב לשדה */
+.expiry-fields {
+  display: flex;
+  gap: 10px;
+  /* רווח קטן בין חודש לשנה */
+}
 
-  }
-  
-  /* סידור expiry fields */
-  .expiry-fields {
-    display: flex;
-    gap: 10px;
-  }
-  .expiry-fields input {
-    flex: 1;
-    min-width: 60px;
-    max-width: 80px;
-  }
+.expiry-fields input {
+  flex: 1;
+  min-width: 60px;
+  max-width: 80px;
+}
+
+.form-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  /* רווח בין שתי העמודות */
+}
+
+.personal-details,
+.credit-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* כבר יש לך עיצוב כללי ל-input */
+.form-group input {
+  padding: 8px;
+  font-size: 14px;
+  /* max-width: 100%; */
+  max-width: 220px;
+  /* הגבלת רוחב לשדה */
+
+}
+
+/* סידור expiry fields */
+.expiry-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.expiry-fields input {
+  flex: 1;
+  min-width: 60px;
+  max-width: 80px;
+}
