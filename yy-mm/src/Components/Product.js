@@ -50,7 +50,7 @@ const navigate = useNavigate();
                 <p className="price">{props.price} ש"ח</p>
                 <p className="description">{props.description}</p>
             </div>
-            <ProductModal name={props.name} src={props.src} price={props.price} description={props.description} show={showModal} onClose={closeModal} />
+            <ProductModal  src={props.src} name={props.name} price={props.price} description={props.description} show={showModal} onClose={closeModal} />
         </>
     );
 }

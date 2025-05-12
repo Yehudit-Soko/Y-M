@@ -24,7 +24,7 @@ function ProductModal(props) {
                 <div className="modal-content">
                     <button onClick={props.onClose}>X</button>
 
-                    <BigProduct name={props.name} src={props.src} price={props.price} description={props.description} ></BigProduct>
+                    <BigProduct  src={props.src} name={props.name} price={props.price} description={props.description} ></BigProduct>
                     <button onClick={() => navigate('/AddToCart', {
                         state: {
                             name: props.name,

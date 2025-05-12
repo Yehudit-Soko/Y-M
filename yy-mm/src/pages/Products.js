@@ -23,8 +23,8 @@ function Products(props) {
             if(props.type==element.type||props.type=="default")
           return (
             <Product
-              name={element.name}
               src={element.src}
+              name={element.name}
               price={element.price}
               description={element.description}
               amount = {element.amount}

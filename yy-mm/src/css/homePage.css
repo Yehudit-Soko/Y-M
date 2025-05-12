@@ -1,4 +1,4 @@
-.header {
+ .header {
   position: sticky;
   height: 2px;
 }
@@ -7,16 +7,16 @@ nav {
 
   margin-top: 0;
   /* אין רווח בין ההדר ל-NAV */
-  background-color: #ffffff;
-  font-family: Arial, sans-serif;
-  direction: rtl;
-  /* position: fixed; */
+  background-color: #ffffff; 
+  /* font-family: Arial, sans-serif; */
+  direction: rtl; 
+   position: fixed; 
   /* חדש */
-  top: 0;
+   top: 0; 
   /* חדש */
-  width: 100%;
+   width: 100%; 
   /* חדש */
-  z-index: 1000;
+   z-index: 1000; 
   /* חדש, מבטיח שישאר מעל כל תוכן */
 }
 

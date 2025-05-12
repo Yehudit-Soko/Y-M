@@ -1,6 +1,6 @@
-/* nav {
+ nav {
   background-color: rgb(255, 255, 255);
-  /* רקע לבן 
+  /* רקע לבן */
   padding: 20px 40px;
   font-family: Arial, sans-serif;
   direction: rtl;
@@ -9,7 +9,7 @@
   width: 100%;
   z-index: 1000;
   transition: background-color 0.3s ease, padding 0.3s ease;
-} */
+} 
 
 nav.scrolled {
   background-color: rgb(248, 103, 168);
