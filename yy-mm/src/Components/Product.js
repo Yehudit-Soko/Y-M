@@ -4,7 +4,7 @@ import ProductModal from "./ProductModal";
 import { useState } from "react";
 import React from "react";
 import store from "../redux/store";
-import "../css/Product.css"
+// import "../css/Product.css"
 // import { useDispatch } from "react-redux";
 import { add_cart } from "../redux/actions"
 import CartButton from "./CartButton";
@@ -48,7 +48,7 @@ const navigate = useNavigate();
                         </div>
                     </button>     
                 <p className="price">{props.price} ש"ח</p>
-                <p className="description">{props.description}</p>
+                {/* <p className="description">{props.description}</p> */}
             </div>
             <ProductModal  src={props.src} name={props.name} price={props.price} description={props.description} show={showModal} onClose={closeModal} />
         </>

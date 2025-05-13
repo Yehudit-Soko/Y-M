@@ -18,7 +18,7 @@ export const cartReducer = (state = cartInitialState, action) => {
                 }
                 return {
                     ...state,
-                    cart: state.cart.filter(item => item.name !== action.payload.name)
+                    cart: state.cart.filter(item => item.name !== action.payload.product.name)
                 };
             
             case CHANGE_PRODUCT:

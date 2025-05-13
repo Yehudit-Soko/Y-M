@@ -28,7 +28,7 @@ function AddToCart(props) {
                 <CartButton name={name} counter={counter} /> {/* הפעלת כפתור הוספת המוצר לעגלה */}
             </div>
 
-            <Footer />
+           
         </>
     );
 }

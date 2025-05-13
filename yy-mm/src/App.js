@@ -11,6 +11,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ShoppingCart from './pages/ShoppingCart';
 import AddToCart from './pages/AddToCart';
+import ContactUs from './pages/ContactUs';
 
 function App(props) {
   return (
@@ -26,7 +27,7 @@ function App(props) {
       <Route path='/shoppingCart' element={< ShoppingCart/>}></Route>
       <Route path='/checkOut' element={<CheckOut />}></Route>
       <Route path='/AddToCart' element={<AddToCart />}></Route>
-      
+      <Route path='/contactUs' element={<ContactUs />}></Route>
     </Routes>
 
     </BrowserRouter>

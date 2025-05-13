@@ -1,8 +1,8 @@
 import { REDUCE_PRODUCT,ADD_CART, CHANGE_PRODUCT } from "./actionTypes";
 
-export const reduce_product = (product) => ({
+export const reduce_product = (product,amount) => ({
     type: REDUCE_PRODUCT,
-    payload: product,
+    payload: {product,amount},
 });
 export  const add_cart = (product) => ({
     type: ADD_CART,

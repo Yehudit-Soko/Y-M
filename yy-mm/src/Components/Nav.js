@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "../css/nav.css";
+// import "../css/nav.css";
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,8 +25,8 @@ function Nav() {
           <li><Link to="/">דף הבית</Link></li>
           <li><Link to="/products">מוצרים</Link></li>
           <li><Link to="/shoppingCart">עגלה</Link></li>
-          <li><Link to="/">צור קשר</Link></li>
-          <li><Link to="/CheckOut">תשלום</Link></li>
+          <li><Link to="/contactUs">צור קשר</Link></li>
+
         </ul>
        
       </div>

@@ -7,10 +7,12 @@ import ReduceCart from "../Components/ReduceCart";
 import Footer from "../Components/Footer";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import shoppingCart from "../css/shoppingCart.css"
+// import shoppingCart from "../css/shoppingCart.css"
 import { change_product } from "../redux/actions";
+import { useNavigate } from "react-router-dom";
 
 function ShoppingCart() {
+  const navigate = useNavigate();
   const cart = useSelector(state => state.cart.cart); // גישה לעגלת קניות
   const inventory = useSelector(state => state.inventory.inventory); // גישה למלאי
   const dispatch = useDispatch();
@@ -90,6 +92,7 @@ function ShoppingCart() {
           );
         })}
         <h1 className="total-amount">הסכום לתשלום : {account.current} ש"ח</h1>
+        <button onClick={() => navigate('/checkOut')}>לתשלום</button>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import Product from "../Components/Product";
-import store from "../redux/store";
+import store from "../redux/store.js";
 import "../css/productsPage.css";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";

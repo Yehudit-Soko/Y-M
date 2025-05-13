@@ -15,8 +15,8 @@ import electricViolin from "../pictures/violins/electricViolin.png"
 
 
 const inventoryInitialState = {
-    inventory: [{ name: "גיטרה קלאסית", price: "430", src: classGuitar, description: "לחיעבכי", amount: 5 ,type:"guitar"},
-    { name: "גיטרה חשמלית", price: "5430", src: electricGuitar, description: "לחיעבכי", amount: 5,type:"guitar"},
+    inventory: [{ name: "גיטרה קלאסית", price: "430", src: classGuitar, description: "לחיעבכי", amount:2 ,type:"guitar"},
+    { name: "גיטרה חשמלית", price: "5430", src: electricGuitar, description: "לחיעבכי", amount: 1,type:"guitar"},
     { name: "גיטרה אקוסטית", price: "1785", src: acousticGuitar, description: "לחיעבכי", amount: 5 ,type:"guitar"},
     { name: "פסנתר כנף", price: "32900", src: grandPiano, description: "לחיעבכי", amount: 5 ,type:"piano"},
     { name: "פסנתר קיר", price: "21900", src: wallPiano, description: "לחיעבכי", amount: 5 ,type:"piano"},
@@ -38,8 +38,8 @@ export const inventoryReducer = (state = inventoryInitialState, action) => {
             return {
                 ...state,
                 inventory: state.inventory.map(item => {
-                    if (item.name === action.payload.name) {
-                        return { ...item, amount: item.amount > 0 ? item.amount - 1 : 0 }; // מפחית את כמות המוצר, לא פחות מ-0
+                    if (item.name === action.payload.product.name) {
+                        return { ...item, amount: item.amount >= action.payload.amount ? item.amount - action.payload.amount : item.amount }; 
                     }
                     return item;
                 })

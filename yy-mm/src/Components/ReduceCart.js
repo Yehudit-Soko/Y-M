@@ -6,7 +6,7 @@ function ReduceCart (props) {
     function reduce () {
         console.log(props.element);
         
-        dispatch(reduce_product(props.element));
+        dispatch(reduce_product(props.element,1));
     }
 
 

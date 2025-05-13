@@ -1,14 +1,38 @@
-import React from "react";
-import "../css/checkout.css";
+import React, { useState } from "react";
+// import "../css/checkout.css";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { reduce_product } from "../redux/actions";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 function CheckOut() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  // const [account,setAccount]=useState(0);
+  let total = 0;
+  const cart = useSelector(state => state.cart.cart);
+  const inventory = useSelector(state => state.inventory.inventory);
   function finishOrder() {
-    alert("ההזמנה בוצעה בהצלחה!!")
+    cart.forEach((element)=>{
+       const product = inventory.find(e=> e.name === element.name);
+
+      if(product.amount>=element.amount) {
+        dispatch(reduce_product(product,element.amount));
+        total+=element.amount * element.price;
+      }
+      else{
+        alert("שים לב!\n נותרו "+product.amount+"יחידות מ"+product.name);
+        dispatch(reduce_product(product,product.amount));
+        total+=product.amount*element.price;
+      }
+     
+    })
+    alert('ההזמנה בוצעה בהצלחה\n סה"כ:'+total);
+    navigate('/contactUs');
   }
   return (
   <>

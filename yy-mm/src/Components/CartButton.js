@@ -2,8 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { add_cart, change_product } from "../redux/actions";
 import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png";
+import { useNavigate } from "react-router-dom";
 
 function CartButton(props) {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const inventory = useSelector(state => state.inventory.inventory); // גישה למלאי
     const [chosenProduct, setChosenProduct] = useState({});
@@ -32,6 +34,7 @@ function CartButton(props) {
         dispatch(add_cart(product));
         dispatch(change_product(product,props.counter));
         alert("המוצר נוסף בהצלחה");
+        navigate('/products');
     }
 
     return (
