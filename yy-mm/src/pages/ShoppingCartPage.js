@@ -1,10 +1,10 @@
-import Nav from "../Components/Nav";
-import Product from "../Components/Product";
+import Nav from "../components/Nav";
+import Product from "../components/Product";
 import store from "../redux/store";
 import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png";
-import BigProduct from "../Components/BigProduct";
-import ReduceCart from "../Components/ReduceCart";
-import Footer from "../Components/Footer";
+import BigProduct from "../components/BaseProduct";
+import ReduceCart from "../components/ReduceCart";
+import Footer from "../components/Footer";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import shoppingCart from "../css/shoppingCart.css"
@@ -29,8 +29,8 @@ function ShoppingCart() {
             alt="icon"
             style={{ width: "50vw", height: "40vw", marginRight: "8px", }}
           />
+          <Footer></Footer>
         </>
-
       );
     }
   }

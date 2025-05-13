@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import "../css/checkout.css";
-import Nav from "../Components/Nav";
-import Footer from "../Components/Footer";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { reduce_product } from "../redux/actions";
 import { useNavigate } from "react-router-dom";

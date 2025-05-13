@@ -6,11 +6,11 @@ import React from "react";
 import store from "../redux/store";
 import Product from "./Product";
 import CartButton from "./CartButton";
-import BigProduct from "./BigProduct";
+import BigProduct from "./BaseProduct";
 import Icon from "../pictures/icons/shoppingCartIcon.png"
 import { useNavigate } from 'react-router-dom';
 
-import AddToCart from "../pages/AddToCart";
+import AddToCart from "../pages/AddToCartPage";
 
 
 function ProductModal(props) {

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-// import "../css/homePage.css";
-import Nav from "../Components/Nav";
-import Products from "./Products";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Products from "./ProductsPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import ImgComponent from "../Components/ImgComponent";
+import ImgComponent from "../components/ImgComponent";
 import a from "../pictures/slider/a.png"
 import b from "../pictures/slider/b.png"
 import i from "../pictures/silderB/i.png"
@@ -16,7 +16,7 @@ import e from "../pictures/silderB/e.png"
 import f from "../pictures/silderB/f.png"
 import g from "../pictures/silderB/g.png"
 import h from "../pictures/silderB/h.png"
-import Footer from "../Components/Footer";
+// import "../css/homePage.css";
 
 function HomePage() {
     const brands1 = [
@@ -90,12 +90,6 @@ function HomePage() {
 
     return (
         <>
-            <div class="header">
-                <p className="A">
-                    מיתרים
-                </p>
-            {/* <div className="logo">🎵 מיתרים</div> */}
-            </div>
             <Nav />
             <Slider {...settings1} className="custom-slider-brand1">
                 {brands1.map((b, index) => (

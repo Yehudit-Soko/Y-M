@@ -1,8 +1,8 @@
-import Product from "../Components/Product";
+import Product from "../components/Product.js";
 import store from "../redux/store.js";
 import "../css/productsPage.css";
-import Nav from "../Components/Nav";
-import Footer from "../Components/Footer";
+import Nav from "../components/Nav.js";
+import Footer from "../components/Footer.js";
 import { Link } from "react-router-dom";
 
 function Products(props) {

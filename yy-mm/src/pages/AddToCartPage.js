@@ -1,9 +1,9 @@
 import { useState } from "react";
-import BigProduct from "../Components/BigProduct";
+import BigProduct from "../components/BaseProduct";
 import { useLocation } from 'react-router-dom';
-import Nav from "../Components/Nav";
-import CartButton from "../Components/CartButton";
-import Footer from "../Components/Footer";
+import Nav from "../components/Nav";
+import CartButton from "../components/CartButton";
+import Footer from "../components/Footer";
 
 function AddToCart(props) {
     const location = useLocation();

@@ -15,11 +15,8 @@ function Footer() {
                     <h3>קישורים שימושיים</h3>
                     <ul>
                         <li><a href="/">🏠 דף הבית</a></li>
-                        {/* <li><a href="/piano">🎹 פסנתרים</a></li>
-                        <li><a href="/guitar">🎸 גיטרות</a></li>
-                        <li><a href="/violin">🎻 כינורות</a></li> */}
                         <li><a href="/products">⭐ מוצרים</a></li>
-                        <li><a href="/contact">✉️ צור קשר</a></li>
+                        <li><a href="/contactUs">✉️ צור קשר</a></li>
                     </ul>
                 </div>
 

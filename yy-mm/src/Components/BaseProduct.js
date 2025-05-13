@@ -1,15 +1,13 @@
 // import "../css/bigProduct.css";
 
-function BigProduct(props) {
+function BaseProduct(props) {
   return (
     <div className="big-product-container">
-      <h1>{props.name}</h1>
       <img src={props.src} alt={props.name} />
+      <h1>{props.name}</h1>
       <p className="price">{props.price} ש"ח</p>
-      <p>{props.description}</p>
-      
     </div>
   );
 }
 
-export default BigProduct;
+export default BaseProduct;
