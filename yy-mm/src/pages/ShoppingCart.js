@@ -7,7 +7,7 @@ import ReduceCart from "../Components/ReduceCart";
 import Footer from "../Components/Footer";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import shoppingCart from "../Css/shoppingCart.css"
+import shoppingCart from "../css/shoppingCart.css"
 import { change_product } from "../redux/actions";
 
 function ShoppingCart() {

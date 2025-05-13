@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/checkout.css";
+import "../css/checkout.css";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
 

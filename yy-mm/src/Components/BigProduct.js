@@ -1,4 +1,4 @@
-import "../Css/bigProduct.css";
+import "../css/bigProduct.css";
 
 function BigProduct(props) {
   return (

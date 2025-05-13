@@ -4,7 +4,7 @@ import ProductModal from "./ProductModal";
 import { useState } from "react";
 import React from "react";
 import store from "../redux/store";
-import "../Css/Product.css"
+import "../css/Product.css"
 // import { useDispatch } from "react-redux";
 import { add_cart } from "../redux/actions"
 import CartButton from "./CartButton";

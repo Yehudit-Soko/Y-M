@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Css/homePage.css";
+import "../css/homePage.css";
 import Nav from "../Components/Nav";
 import Products from "./Products";
 import "slick-carousel/slick/slick.css";

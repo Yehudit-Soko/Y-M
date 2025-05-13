@@ -1,5 +1,5 @@
 import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png"
-import "../Css/productModal.css"
+import "../css/productModal.css"
 // import AddShoppingCart from "../functions/AddShoppingCart";
 import React from "react";
 // import { useState } from "react";
