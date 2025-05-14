@@ -1,48 +1,47 @@
-import shoppingCartIcon from "../pictures/icons/shoppingCartIcon.png"
-import "../css/productModal.css"
-// import AddShoppingCart from "../functions/AddShoppingCart";
 import React from "react";
-// import { useState } from "react";
-import store from "../redux/store";
-import Product from "./Product";
-import CartButton from "./CartButton";
-import BigProduct from "./BaseProduct";
-import Icon from "../pictures/icons/shoppingCartIcon.png"
-import { useNavigate } from 'react-router-dom';
-
-import AddToCart from "../pages/AddToCartPage";
-
+import { useNavigate } from "react-router-dom";
+import "../css/productModal.css";
+import BaseProduct from "./BaseProduct";
 
 function ProductModal(props) {
-    {
+  const navigate = useNavigate();
 
-        const navigate = useNavigate();
-        if (!props.show)
-            return null;
-        return (
-            <div className="modal-overlay">
-                <div className="modal-content">
-                    <button onClick={props.onClose}>X</button>
+  if (!props.show) return null;
 
-                    <BigProduct  src={props.src} name={props.name} price={props.price} description={props.description} ></BigProduct>
-                    <button onClick={() => navigate('/AddToCart', {
-                        state: {
-                            name: props.name,
-                            src: props.src,
-                            price: props.price,
-                            description: props.description,
-                            amount: props.amount
-                        }
-                    })}>
-                    
-                        <img src={Icon} style={{ width: "50px", height: "50px" }} />
-                    </button>
-                </div>
-            </div >
+  const handleAddToCart = () => {
+    navigate("/AddToCart", {
+      state: {
+        name: props.name,
+        src: props.src,
+        price: props.price,
+        description: props.description,
+        amount: props.amount,
+      },
+    });
+  };
 
-        );
-    }
+  return (
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <button className="close-btn" onClick={props.onClose}>X</button>
 
+        <div className="modal-body">
+          <BaseProduct
+            src={props.src}
+            name={props.name}
+            price={props.price}
+            description={props.description}
+          />
+        </div>
 
+        <div className="modal-footer">
+          <button className="add-to-cart" onClick={handleAddToCart}>
+            <span style={{ marginRight: "6px" }}>הוסף לעגלה</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
+
 export default ProductModal;

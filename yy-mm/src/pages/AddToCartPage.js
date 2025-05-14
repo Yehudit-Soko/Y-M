@@ -1,9 +1,10 @@
 import { useState } from "react";
-import BigProduct from "../components/BaseProduct";
+import BaseProduct from "../components/BaseProduct";
 import { useLocation } from 'react-router-dom';
 import Nav from "../components/Nav";
 import CartButton from "../components/CartButton";
 import Footer from "../components/Footer";
+import "../css/addToCart.css"
 
 function AddToCart(props) {
     const location = useLocation();
@@ -14,8 +15,8 @@ function AddToCart(props) {
     return (
         <>
             <div>
-                <Nav />
-                <BigProduct name={name} src={src} price={price} description={description} />
+                <Nav></Nav>
+                <BaseProduct name={name} src={src} price={price} description={description} />
                 <button onClick={() => setCounter(counter + 1)}>+</button>
                 <p>{counter}</p>
                 <button onClick={() => {
@@ -27,7 +28,7 @@ function AddToCart(props) {
                 }}>-</button>
                 <CartButton name={name} counter={counter} /> {/* הפעלת כפתור הוספת המוצר לעגלה */}
             </div>
-
+            <Footer></Footer>
            
         </>
     );

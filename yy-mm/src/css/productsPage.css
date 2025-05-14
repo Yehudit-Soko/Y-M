@@ -1,125 +1,138 @@
 /* עיצוב כללי */
 body {
-    font-family: Arial, sans-serif;
-    direction: rtl;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* סרגל ניווט קטן */
-  .nav_small {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    padding: 10px 0;
-    list-style: none;
-  }
-  
-  .nav_small li {
-    margin: 0 20px;
-  }
-  
-  .nav_small a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .nav_small a:hover {
-    text-decoration: underline;
-  }
-  
-  /* מכולת מוצרים */
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* סרגל ניווט קטן */
+.nav_small {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+  list-style: none;
+  position:sticky;
+  top: 4vh;
+}
+
+.nav_small li {
+  margin: 0 20px;
+}
+
+.nav_small a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav_small a:hover {
+  text-decoration: underline;
+}
+
+/* מכולת מוצרים */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 20px;
+  gap: 40px;
+  background-color: #ffffff;
+}
+
+/* מוצר בודד */
+.product-container {
+  width: 220px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-container:hover {
+  transform: scale(1.03);
+}
+
+.product-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-container h1 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #222;
+  height: 40px;
+}
+
+.product-container .description {
+  font-size: 14px;
+  color: #555;
+  height: 40px;
+  overflow: hidden;
+}
+
+.product-container .price {
+  font-size: 18px;
+  color: #c62828;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* כפתורים */
+.product-container button {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  padding: 6px 10px; /* צמצום הרוחב */
+  margin: 5px 10px; /* רווח בין הכפתורים */
+  border-radius: 15px; /* יותר עגול */
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.1s ease-in-out, background-color 0.2s;
+  display: inline-block; /* הצגת הכפתורים לצד אחד את השני */
+}
+
+.product-container button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.product-container button:active {
+  transform: scale(0.97);
+}
+
+/* עיצוב האייקון של העגלה */
+.img-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+/* רספונסיביות */
+@media screen and (max-width: 600px) {
   .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 30px 20px;
-    gap: 40px;
-    background-color: #ffffff;
-  }
-  
-  /* מוצר בודד */
-  .product-container {
-    width: 220px;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .product-container:hover {
-    transform: scale(1.03);
-  }
-  
-  .product-container img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    margin-bottom: 10px;
-  }
-  
-  .product-container h1 {
-    font-size: 16px;
-    margin: 10px 0;
-    color: #222;
-    height: 40px;
-  }
-  
-  .product-container .description {
-    font-size: 14px;
-    color: #555;
-    height: 40px;
-    overflow: hidden;
-  }
-  
-  .product-container .price {
-    font-size: 18px;
-    color: #c62828;
-    margin: 10px 0;
-    font-weight: bold;
-  }
-  
-  /* כפתורים */
-  .product-container button {
-    background-color: #1976d2;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    margin: 5px 0;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .product-container button:hover {
-    background-color: #1565c0;
-  }
-  
-  /* עיצוב האייקון של העגלה */
-  .img-icon {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
-  
-  .img-icon img {
-    width: 30px;
-    height: 30px;
+
+  .product-container {
+    width: 90%;
   }
-  
-  /* רספונסיביות */
-  @media screen and (max-width: 600px) {
-    .products {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .product-container {
-      width: 90%;
-    }
-  }
-  
+}

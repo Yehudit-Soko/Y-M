@@ -32,6 +32,7 @@ function Products(props) {
           );
         })}
       </div>
+      <Footer></Footer>
     </>
   );
 }

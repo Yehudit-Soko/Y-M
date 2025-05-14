@@ -1,3 +1,4 @@
+/* כיסוי רקע למודל */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -8,47 +9,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 100%;
-}
-
-
-/* Overlay של המודל */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* רקע כהה לשטח שמסביב */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
-  /* מוודא שהמודל יהיה מעל כל תוכן אחר */
 }
 
 /* תוכן המודל */
 .modal-content {
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
   border-radius: 8px;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease;
 }
 
+.modal-content:hover {
+  transform: scale(1.02);
+}
+
 /* כפתור סגירה */
-.modal-content button {
+.close-btn {
   background-color: transparent;
   color: #333;
   border: none;
@@ -57,60 +44,60 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  padding: 5px 10px;
-  /* הפחתת הריפוד כדי שהכפתור יהיה קטן יותר */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
-/* מעבר עם העכבר על כפתור ה-X */
-.modal-content button:hover {
+.close-btn:hover {
   background-color: #333;
-  /* צבע רקע שחור */
   color: #fff;
-  /* צבע טקסט לבן */
   border: 2px solid #333;
-  /* מסגרת שחורה */
 }
 
-
-/* תוספת של תמונה */
-.modal-content img {
+/* תוכן גוף המודל */
+.modal-body img {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  object-fit: cover;
+  max-height: 50vh;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 20px;
 }
 
-/* כותרת המודל */
-.modal-content h1 {
+.modal-body h1 {
   font-size: 1.8rem;
   color: #333;
   margin-bottom: 15px;
-  font-weight: bold;
 }
 
-/* מחיר המוצר */
-.modal-content p {
+.modal-body p {
   font-size: 1.2rem;
-  color: #4CAF50;
+  color: #020f03;
   margin: 10px 0;
 }
 
-/* תיאור המוצר */
-.modal-content .description {
+.modal-body .description {
   font-size: 1rem;
   color: #777;
   line-height: 1.5;
-  max-height: 150px;
+  max-height: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* מעבר עם העכבר על המודל */
-.modal-content:hover {
-  transform: scale(1.05);
-  /* אפקט זום קל בעת מעבר עם העכבר */
+/* כפתור הוסף לעגלה */
+.add-to-cart {
+  align-self: center;
+  background-color: rgb(26, 96, 104);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.add-to-cart:hover {
+  background-color: rgb(129, 175, 164);
 }

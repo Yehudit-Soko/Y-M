@@ -9,3 +9,4 @@ const ImgComponent = ({ path, className }) => {
 };
 
 export default ImgComponent;
+

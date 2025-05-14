@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "../css/checkout.css";
+import "../css/checkout.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { useDispatch, useSelector } from "react-redux";
@@ -36,7 +36,6 @@ function CheckOut() {
   }
   return (
   <>
-  <Nav></Nav>
   <form className="checkout-form" onSubmit={finishOrder}>
   <h2>טופס תשלום</h2>
   
@@ -104,7 +103,7 @@ function CheckOut() {
 
   <button type="submit" className="checkout-button">בצע תשלום</button>
 </form>
-
+<Footer></Footer>
 
   </>
 
