@@ -1,9 +1,15 @@
+import "../css/header.css"
 function Header() {
   return (
-    <header className="header">
-      <p className="A">מיתרים</p>
-      <div className="logo">🎵 מיתרים</div>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <img src="logo.png" alt="לוגו האתר" />
+          <span>שם האתר</span>
+        </div>
+      </div>
     </header>
+
   );
 }
 

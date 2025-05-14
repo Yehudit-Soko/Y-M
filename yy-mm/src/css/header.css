@@ -1,0 +1,42 @@
+header {
+  background-color: rgb(255, 255, 255);
+  padding: 20px 40px;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  position: relative; /* יש לוודא שהוא לא מקבל פיקסד */
+  z-index: 1001; /* להבטיח שה־header יהיה מעל ה־nav */
+}
+.header {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  direction: rtl;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-content {
+  display: flex;
+  justify-content: flex-start; /* הצמדת התוכן לצד ימין (בכיוון RTL) */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: gold;
+}

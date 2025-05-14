@@ -63,3 +63,71 @@ li {
 li:hover {
   color: gold;
 }
+
+.about-store {
+    background-color: #ffffff; /* רקע לבן */
+    color: #111111; /* טקסט כהה */
+    padding: 40px 30px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    direction: rtl;
+
+    max-width: 800px; /* מגביל את הרוחב */
+    margin: 50px auto; /* מרכז את המלבן בעמוד */
+    border-radius: 12px; /* פינות מעוגלות */
+    box-shadow: 0 0 20px rgba(218, 165, 32, 0.2); /* צל זהוב עדין */
+    border: 1px solid #e0e0e0; /* מסגרת עדינה */
+}
+
+
+
+.about-store h2 {
+    font-size: 32px;
+    color: gold; /* כותרת בצבע זהב */
+    margin-bottom: 20px;
+}
+
+.about-store h3 {
+    font-size: 28px;
+    color: gold; /* כותרת משנה בצבע זהב */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-store p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-store ul {
+    list-style-type: none; /* מסיר את הבולטים */
+    padding: 0;
+    margin: 0;
+}
+
+.about-store ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about-store ul li strong {
+    color: gold; /* הדגשה בזהב */
+}
+
+.about-store ul li:before {
+    content: "• "; /* הוספת בולט מותאם אישית */
+    color: gold; /* צבע בולטים בזהב */
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.about-store p:last-child {
+    margin-bottom: 0;
+}
+
+/* אפקט על כותרת וכותרת משנה */
+.about-store h2:hover, .about-store h3:hover {
+    color: #f3d201; /* צבע זהב בהיר יותר כשמעבירים את העכבר */
+    transition: color 0.3s ease;
+}

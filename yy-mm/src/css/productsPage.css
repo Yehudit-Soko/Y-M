@@ -7,15 +7,16 @@ body {
   padding: 0;
 }
 
-/* סרגל ניווט קטן */
 .nav_small {
   display: flex;
   justify-content: center;
   background-color: #333;
   padding: 10px 0;
   list-style: none;
-  position:sticky;
-  top: 4vh;
+  position: fixed;       /* שיהיה צמוד למסך */
+  top: 80px;             /* בדיוק מתחת ל-nav */
+  width: 100%;
+  z-index: 999;          /* מתחת ל-nav הראשי אבל מעל שאר הדף */
 }
 
 .nav_small li {

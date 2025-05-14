@@ -31,11 +31,13 @@ function ShoppingCart() {
       return (
         <>
           <Nav></Nav>
-          <img
-            src={shoppingCartIcon}
-            alt="icon"
-            style={{ width: "50vw", height: "40vw", marginRight: "8px", }}
-          />
+              <div style={{ textAlign: 'center', padding: '100px 20px', fontSize: '24px' }}>
+        העגלה שלך ריקה כרגע 😕  
+        <br />
+        <span style={{ fontSize: '18px', color: '#666' }}>
+          חזור לדף המוצרים והוסף פריטים שתרצה לרכוש 🎵
+        </span>
+      </div>
           <Footer></Footer>
         </>
       );
